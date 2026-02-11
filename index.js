@@ -48,6 +48,15 @@ app.get("/voters/search", async (req, res) => {
   }
 });
 
+app.get("/voters", async (req, res) => {
+  try {
+    const voters = await Voter.find().limit(100);
+    res.json(voters);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 // GET single voter by id
 app.get("/voters/:id", async (req, res) => {
   try {
