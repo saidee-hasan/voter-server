@@ -56,7 +56,9 @@ app.get("/voters", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-
+app.get("/", (req, res) => {
+  res.send("Server Running");
+});
 // GET single voter by id
 app.get("/voters/:id", async (req, res) => {
   try {
