@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-const mongoURL = "mongodb+srv://voter:1NkQPfIN5AC5C0I8@cluster0.jhu99oz.mongodb.net/voter?retryWrites=true&w=majority";
+const mongoURL = "";
 
 
 
